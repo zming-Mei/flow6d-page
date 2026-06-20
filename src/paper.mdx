@@ -51,30 +51,14 @@ import Figure from "./components/Figure.astro";
 import Picture from "./components/Picture.astro";
 import Cards from "./components/Cards.astro";
 import Card from "./components/Card.astro";
-import Video from "./components/Video.astro";
-import VideoCarousel from "./components/VideoCarousel.astro";
-import CarouselSlide from "./components/CarouselSlide.astro";
 
 import pipeline from "./assets/pipeline.jpeg";
 import framework from "./assets/framework.jpeg";
 import real275 from "./assets/real275.jpeg";
 import artimage from "./assets/artimage.jpeg";
 import robotarm from "./assets/robotarm.jpeg";
-import real275Results from "./assets/real275_results.png";
-import artimageResults from "./assets/artimage_results.png";
 import rigidExperiment from "./assets/rigid_experiment.png";
 import articulatedExperiment from "./assets/articulated_experiment.png";
-
-import blackMug from "./assets/video/black_mug.mp4";
-import yellowMug from "./assets/video/yellow_mug.mp4";
-import mugToBottle from "./assets/video/mug_to_bottle.mp4";
-import bottleToBowl from "./assets/video/bottle_to_bowl.mp4";
-import bottleToMug from "./assets/video/bottle_to_mug.mp4";
-import bottleToMug2 from "./assets/video/bottle_to_mug2.mp4";
-import closeLaptop from "./assets/video/close_laptop.mp4";
-import closeLaptop2 from "./assets/video/close_laptop2.mp4";
-import openLaptop1 from "./assets/video/open_laptop1.mp4";
-import openLaptop2 from "./assets/video/open_laptop2.mp4";
 
 <Figure>
   <Picture slot="figure" src={pipeline} alt="Prior candidate-based pose pipelines versus Flow6D." />
@@ -154,84 +138,6 @@ Tested on the real-world REAL275 and 7-part RobotArm datasets, Flow6D stays robu
 <Figure>
   <Picture slot="figure" src={robotarm} alt="Qualitative results on the real-world RobotArm dataset." />
   <Fragment slot="caption">**RobotArm results** — robust on complex, multi-part articulations in real-world settings.</Fragment>
-</Figure>
-
-## Real-Robot Experiments
-
-We deploy Flow6D on a physical robot to estimate poses in real time and drive manipulation. Results are organized by object type.
-
-### Rigid objects
-
-#### Pick the mug and place to box
-
-<Figure>
-  <VideoCarousel slot="figure">
-    <CarouselSlide>
-      <Video src={blackMug} />
-    </CarouselSlide>
-    <CarouselSlide>
-      <Video src={yellowMug} />
-    </CarouselSlide>
-  </VideoCarousel>
-  <Fragment slot="caption">Pick the mug and place it into the box — black mug and yellow mug variants.</Fragment>
-</Figure>
-
-#### Pour from mug to bottle
-
-<Figure>
-  <Video slot="figure" src={mugToBottle} />
-  <Fragment slot="caption">Pouring water from a mug into a bottle.</Fragment>
-</Figure>
-
-#### Pour from bottle to bowl
-
-<Figure>
-  <Video slot="figure" src={bottleToBowl} />
-  <Fragment slot="caption">Pouring water from a bottle into a bowl.</Fragment>
-</Figure>
-
-#### Pour from bottle to mug
-
-<Figure>
-  <VideoCarousel slot="figure">
-    <CarouselSlide>
-      <Video src={bottleToMug} />
-    </CarouselSlide>
-    <CarouselSlide>
-      <Video src={bottleToMug2} />
-    </CarouselSlide>
-  </VideoCarousel>
-  <Fragment slot="caption">Pouring water from a bottle into a mug — two viewpoints.</Fragment>
-</Figure>
-
-### Articulated objects
-
-#### Close laptop
-
-<Figure>
-  <VideoCarousel slot="figure">
-    <CarouselSlide>
-      <Video src={closeLaptop} />
-    </CarouselSlide>
-    <CarouselSlide>
-      <Video src={closeLaptop2} />
-    </CarouselSlide>
-  </VideoCarousel>
-  <Fragment slot="caption">Closing a laptop — two viewpoints.</Fragment>
-</Figure>
-
-#### Open laptop
-
-<Figure>
-  <VideoCarousel slot="figure">
-    <CarouselSlide>
-      <Video src={openLaptop1} />
-    </CarouselSlide>
-    <CarouselSlide>
-      <Video src={openLaptop2} />
-    </CarouselSlide>
-  </VideoCarousel>
-  <Fragment slot="caption">Opening a laptop — two viewpoints.</Fragment>
 </Figure>
 
 ## BibTeX
