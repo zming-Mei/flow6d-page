@@ -52,6 +52,7 @@ import Picture from "./components/Picture.astro";
 import Cards from "./components/Cards.astro";
 import Card from "./components/Card.astro";
 import RealWorldExperiments from "./components/RealWorldExperiments.astro";
+import TwoColumns from "./components/TwoColumns.astro";
 
 import pipeline from "./assets/pipeline.jpeg";
 import framework from "./assets/framework.jpeg";
@@ -121,15 +122,17 @@ Using only depth input (no category prior), Flow6D sets a new state of the art w
 
 Flow6D achieves the lowest per-part rotation and translation errors while running two-to-three orders of magnitude faster than optimization-based baselines.
 
-<Figure>
-  <Picture slot="figure" src={articulatedExperiment} alt="Comparison with state-of-the-art methods on the ArtImage dataset." />
-  <Fragment slot="caption">**Comparison on ArtImage** across Laptop, Eyeglasses, Dishwasher, Scissors, and Drawer categories.</Fragment>
-</Figure>
+<TwoColumns>
+  <Figure slot="left">
+    <Picture slot="figure" src={articulatedExperiment} alt="Comparison with state-of-the-art methods on the ArtImage dataset." />
+    <Fragment slot="caption">**Comparison on ArtImage** across Laptop, Eyeglasses, Dishwasher, Scissors, and Drawer categories.</Fragment>
+  </Figure>
 
-<Figure>
-  <Picture slot="figure" src={artimage} alt="Qualitative results on the ArtImage dataset." />
-  <Fragment slot="caption">**ArtImage qualitative results** — accurate per-part poses even at joints and under partial occlusion.</Fragment>
-</Figure>
+  <Figure slot="right">
+    <Picture slot="figure" src={artimage} alt="Qualitative results on the ArtImage dataset." />
+    <Fragment slot="caption">**ArtImage qualitative results** — accurate per-part poses even at joints and under partial occlusion.</Fragment>
+  </Figure>
+</TwoColumns>
 
 ## Real-world experiments
 
