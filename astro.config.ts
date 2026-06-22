@@ -7,8 +7,6 @@ import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
 import rehypeCitation from "rehype-citation";
 
-import react from "@astrojs/react";
-
 import astroExpressiveCode from "astro-expressive-code";
 
 // https://astro.build/config
@@ -45,7 +43,6 @@ export default defineConfig({
         theme.type === "dark" ? `[data-theme="dark"]` : `[data-theme="light"]`,
     }),
     mdx(),
-    react(),
   ],
   fonts: [
     {

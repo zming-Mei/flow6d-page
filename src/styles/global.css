@@ -1,6 +1,5 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
-@import "tw-animate-css";
 @plugin "@tailwindcss/forms";
 
 @custom-variant dark {
@@ -285,7 +284,8 @@ main .katex-display {
 
 @layer base {
   * {
-    @apply border-border outline-outline/50 wrap-break-word;
+    @apply border-border wrap-break-word;
+    outline-color: color-mix(in oklab, var(--outline) 50%, transparent);
   }
   button {
     @apply cursor-pointer;
